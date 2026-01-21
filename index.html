@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechWave</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .gradient-text {
+        background: linear-gradient(90deg, #ff1cf7 0%, #ff7a00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gradient-btn {
+        background: linear-gradient(90deg, #ff1cf7 0%, #ff7a00 100%);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .bg-overlay {
+        position: relative;
+      }
+
+      .badge-new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #00ff88;
+        color: #000;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        box-shadow: 0 4px 10px rgba(0, 255, 136, 0.4);
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+
+        40% {
+          transform: translateY(-10px);
+        }
+
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#1A0B2E] text-white font-sans">
+    <nav
+      class="fixed w-full top-0 z-50 bg-[#1A0B2E] bg-opacity-95 backdrop-blur-md border-b border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 lg:h-20">
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-bold">
+              Tech<span class="gradient-text">Wave</span>
+            </a>
+          </div>
+
+          <div class="hidden lg:flex items-center space-x-8">
+            <a href="#home" class="text-white">Home</a>
+            <a href="#about" class="text-white">About</a>
+            <a href="#why" class="text-white">Why</a>
+            <a href="#episodes" class="text-white">Episodes</a>
+            <a href="#host" class="text-white">Host</a>
+          </div>
+
+          <div class="hidden lg:block">
+            <button
+              class="gradient-btn text-white font-semibold px-6 py-2.5 rounded-full"
+            >
+              Subscribe ➜
+            </button>
+          </div>
+
+          <div class="lg:hidden">
+            <img src="./asset/hamburger-menu.png" alt="mobile menu" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center pt-20"
+      style="
+        background-image: url(&quot;./asset/hero-bg.png&quot;);
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="bg-overlay absolute inset-0"></div>
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div class="relative inline-block mb-8">
+          <img
+            src="./asset/hero-circle.png"
+            class="w-48 sm:w-64 lg:w-80 mx-auto"
+          />
+          <img
+            src="./asset/microphone.png"
+            class="absolute animate-pulse top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 sm:w-24 lg:w-28"
+          />
+          <div class="badge-new">
+            <span
+              class="bg-[#00FF88] text-[#000000] text-xs font-bold px-3 py-1.5 rounded-full"
+            >
+              NEW
+            </span>
+          </div>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+          Tech<span class="gradient-text">Wave</span>
+        </h1>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+          Join us as we explore the cutting edge of technology, innovation, and
+          digital transformation with industry experts.
+        </p>
+        <div class="flex flex-row gap-4 justify-center">
+          <button
+            class="gradient-btn inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold whitespace-nowrap"
+          >
+            <img src="./asset/spotify.png" alt="Spotify" class="w-5 h-5" />
+            Listen on Spotify
+          </button>
+
+          <button
+            style="border: 2px solid #00fd87"
+            class="inline-flex text-[#00FD87] items-center gap-2 px-6 py-3 rounded-full font-semibold whitespace-nowrap"
+          >
+            <img src="./asset/message.png" alt="Message" class="w-5" />
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16 lg:py-24 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center mb-4">
+          About The Podcast
+        </h2>
+        <p
+          class="text-gray-400 text-center max-w-3xl mx-auto mb-12 lg:mb-16 px-4"
+        >
+          TechWave is your gateway to understanding the technology that shapes
+          our world. Each episode features in-depth conversations with
+          innovators, entrepreneurs, and experts who are pushing the boundaries
+          of what's possible in tech.
+        </p>
+        <p
+          class="text-gray-400 text-center max-w-3xl mx-auto mb-12 lg:mb-16 px-4"
+        >
+          Join thousands of young professionals and tech enthusiasts who start
+          their day with TechWave.
+        </p>
+
+        <div class="my-12">
+          <hr class="border-gray-700 border-t-2 rounded opacity-50" />
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="text-center">
+            <h3 class="text-3xl lg:text-4xl font-bold text-[#00FD87] mb-2">
+              150K+
+            </h3>
+            <p class="text-gray-400 text-sm lg:text-base">Monthly Listeners</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-3xl lg:text-4xl font-bold text-[#00FD87] mb-2">
+              200+
+            </h3>
+            <p class="text-gray-400 text-sm lg:text-base">Published Episodes</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-3xl lg:text-4xl font-bold text-[#00FD87] mb-2">
+              4.9★
+            </h3>
+            <p class="text-gray-400 text-sm lg:text-base">Average Rating</p>
+          </div>
+
+          <div class="text-center">
+            <h3 class="text-3xl lg:text-4xl font-bold text-[#00FD87] mb-2">
+              50+
+            </h3>
+            <p class="text-gray-400 text-sm lg:text-base">Expert Guests</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
